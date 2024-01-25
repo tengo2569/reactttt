@@ -1,0 +1,140 @@
+.bigbox {
+  /* border: 1px solid red; */
+  width: 1000px;
+  height: 636px;
+  display: grid;
+  grid-template-columns: 275px 430px;
+  column-gap: 296px;
+
+}
+
+h1 {
+  color: #007FDB;
+  font-size: 96px;
+  font-weight: 700;
+  margin-top: 100%;
+  font-family: Inter;
+
+
+
+}
+
+.box1 {
+  /* border: 1px solid black; */
+  width: 430px;
+  height: 636px;
+  background-image: url(./assets/img.svg);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color: #FFF;
+  border-radius: 10px 10px 0px 0px;
+
+}
+h2 {
+  color: #fff;
+  font-family: "Russo One";
+  font-size: 18px;
+  font-weight: 400;
+  position: absolute;
+  margin-top: 115px;
+  margin-left: 340px;
+  width: 162px;
+  height: 22px;
+}
+
+h3 {
+  width: 230px;
+  height: 58px;
+  color: #FFF;
+  font-family: "Russo One";
+  font-size: 48px;
+  font-weight: 400;
+  margin-top: 131px;
+  margin-left: 185px;
+}
+
+.input {
+  width: 373px;
+  height: 49px;
+  border-radius: 5px;
+  /* background: #EBEFF2; */
+  margin-top: 23px;
+  margin-left: 29px;
+  /* border: 1px solid black; */
+  display: flex;
+  gap: 10px;
+}
+
+.btn1 {
+  border: none;
+}
+
+input {
+  border-radius: 5px;
+  background: #EBEFF2;
+  border: none;
+  outline: none;
+  width: 275px;
+  height: 49px;
+  padding-left: 50px;
+  padding-right: 20px;
+}
+
+input::placeholder {
+  color: #888;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  gap: 10px;
+  border: none;
+ 
+}
+
+.circle {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  margin-top: 12px;
+  margin-left: 14px;
+  border-radius: 15px;
+}
+.notes{
+
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 36px;
+  width: 430px;
+height: 636px;
+/* border-radius: 10px; */
+/* background: #FFF; */
+overflow-x: hidden;
+}
+.task{
+  width: 373px;
+  height: 44px;
+  /* border: 1px solid black; */
+  margin-left: 31px;
+  position: relative;
+}
+.maintxt{
+  color: #0D0D0D;
+font-family: Inter;
+font-size: 18px;
+font-weight: 500;
+
+}
+.taskimg{
+  position: absolute;
+  left: 311px;
+}
+.bin{
+  position: absolute;
+  margin-left: 349px;
+}
+.aio{
+  background-color: red;
+}
