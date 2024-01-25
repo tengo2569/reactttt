@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import './card.css';
 
@@ -25,7 +24,6 @@ const date = (): string => {
 const Card = () => {
   const [notes, donote] = useState<Task[]>([]);
   const [inputValue, newvalue] = useState<string>('');
-  const [notes1, setNotes] = useState<Task[]>([]);
 
   const change1 = (event: React.ChangeEvent<HTMLInputElement>) => {
     newvalue(event.target.value);
@@ -42,8 +40,9 @@ const Card = () => {
       newvalue('');
     }
   };
+
   const handledelete = (id: number) => {
-    setNotes(notes.filter(note => note.id !== id));
+    donote(notes.filter(note => note.id !== id));
   };
 
   return (
@@ -54,10 +53,9 @@ const Card = () => {
           <h2>{date()}</h2>
           <h3>{time()} AM</h3>
           <form onSubmit={result}>
-        
             <div className='input'>
               <input
-              maxLength={30}
+                maxLength={30}
                 placeholder='Note'
                 value={inputValue}
                 onChange={change1}
@@ -69,9 +67,9 @@ const Card = () => {
           </form>
           <div className='notes'>
             {notes.map(task => (
-              <div  key={task.id} className='task'>
-                <img className='taskimg' src="./circempty.svg" alt="" />
-                <img className='bin'  src="./bin.svg" alt= "" onClick={() => handledelete(task.id)}  />
+              <div key={task.id} className='task'>
+                <img className='taskimg' src="./circempty.svg" alt="Task Icon" />
+                <img className='bin' src="./bin.svg" alt="Delete Task" onClick={() => handledelete(task.id)} />
                 <span className='maintxt'>{task.text}</span>
               </div>
             ))}
