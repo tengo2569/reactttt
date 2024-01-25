@@ -6,6 +6,7 @@ interface Task {
   text: string;
 }
 
+
 const time = (): string => {
   const curr: Date = new Date();
   const hrs: number = curr.getHours();
@@ -17,9 +18,10 @@ const time = (): string => {
 
 const date = (): string => {
   const curr1: Date = new Date();
-  const changee = { day: 'numeric', weekday: 'short' };
-  return curr1.toLocaleDateString('en-US', changee);
+  const change: Intl.DateTimeFormatOptions = { day: 'numeric', weekday: 'short' as const }; 
+  return curr1.toLocaleDateString('en-US', change);
 };
+
 
 const Card = () => {
   const [notes, donote] = useState<Task[]>([]);
